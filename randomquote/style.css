@@ -1,0 +1,22 @@
+body {
+	background-image: url(https://images.unsplash.com/photo-1444682717031-a2498d603d5b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=033f8766338ab1040572c70a45adb9f9)
+}
+
+.quote-header{
+	padding-left:2%;
+	background-color: #33BEBE;
+	color:white;
+	padding-top: 12px;
+	font-family:"Courier New", Courier, monospace;
+}
+img{
+	max-height: 300px;
+}
+.quotes{
+	margin-top: 2%;
+	font-family:"Courier New", Courier, monospace;
+	font-size:1em;
+}
+.quotes p{
+	margin-top:1em;
+}
