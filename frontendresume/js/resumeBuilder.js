@@ -12,35 +12,35 @@ var work = {
 		"title": "super alphabeter",
 		"location": "kalamazoo",
 		"dates": "2/24/2000 - 2/24/2006",
-		"description": "Did awesome alphabetness"
+		"description": " Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	},
 	{
 		"employer": "123 company",
 		"title": "super counter",
 		"location": "kalamazoo",
 		"dates": "07/2004 - 10/2006",
-		"description": "did some awesome counting"
+		"description": " Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	},
 	{
 		"employer": "school 1 ",
 		"title": "teacher",
 		"location": "seoul",
 		"dates": "08/2007-08/2008",
-		"description": "taught english"
+		"description": " Duis in mauris id eros fringilla congue. Donec vitae efficitur elit. Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue.  "
 	},
 	{
 		"employer": "school 2",
 		"title": "teacher",
 		"location": "seoul",
 		"dates": "11/2008 - 02/2014",
-		"description": "taught english"
+		"description": "entum nulla faucibus ligula blandit finibus. In condimentum nulla faucibus ligula blandit finibus. Proin purus ex, consectetur et nisi ut,"
 	},
 	{
 		"employer": "school 3",
 		"title": "teacher",
 		"location": "incheon",
 		"dates": "03/2014 - 03/2016",
-		"description": "taught english"
+		"description": " Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	}]
 }
 var projects = {
@@ -135,12 +135,51 @@ if (bio.skills.length > 0) {
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 	$("#skills").append(formattedSkill);
 
-}
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
+};
+function displayWork() {
+	if(work.jobs.length > 0){
+		for (job in work.jobs) {
+			$("#workExperience").append(HTMLworkStart);
 
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last".append(formattedEmployerTitle);
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+			var formattedEmployerTitle = formattedEmployer + formattedTitle;
+			$(".work-entry:last").append(formattedEmployerTitle);
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+			var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+			$(".work-entry:last").append(formattedLocation);
+			$(".work-entry:last").append(formattedDates);
+			$(".work-entry:last").append(formattedDescription);
+		}
+	}
 }
+displayWork();
+
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
+});
+// function locationizer(work_obj){
+//     var locationsArray = [];
+//     for (job in work_obj.jobs) {
+//         var workLocations = work_obj.jobs[job].location;
+//         locationsArray.push(workLocations);
+//     }
+//     return locationsArray;
+//  }
+// I have no idea and the vid/notes aren't clear: reference line 65 in helperjs
+// function inName(){
+// 	bio.name = bio.name.trim().split(" ");
+// 	console.log(bio.name);
+// 	bio.name[0] = bio.name[0].slice(0,1).toUpperCase() + bio.name[0].slice(1).toLowerCase();
+// 	bio.name[1] = bio.name[1].toUpperCase();
+
+// 	bio.name = bio.name.join(" ");
+// 	return bio.name;
+
+// }
+// inName();
+// $("#main").append(internationalizeButton);
