@@ -66,8 +66,10 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: #999;
-  line-height: 16px;
-  float: left;
+  line-height: 16px;  
+}
+#workExperience, #projects, #education {
+  padding-bottom: 16px;
 }
 
 .location-text {
@@ -77,6 +79,12 @@ h5 {
   line-height: 16px;
   float: right;
 
+}
+.container {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  align:center;
 }
 
 p {
@@ -156,15 +164,34 @@ ul {
   display: none;
 }
 
-img {
+/*img {
   padding: 10px;
-}
+}*/
 
 span {
   padding: 5px;
 }
 
 #lets-connect {
+  text-align: center;
+}
+.fullwidth {
+  width:100%;
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.projectimage {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.projtitle {
+  font-size: 2em;
   text-align: center;
 }
 

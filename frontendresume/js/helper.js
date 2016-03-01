@@ -37,10 +37,12 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectTitle = '<a href="#" class="projtitle">%data%</a>';
+var HTMLprojectDates = '<div class="date-text"><p class="text-center">%data%</p></div>';
+var HTMLprojectDescription = '<div class="fullwidth"><p class="text-center"><br>%data%</p></div>';
+var HTMLprojectImage = '<div class="fullwidth"><a href="#"><img class="projectimage" src="%data%"></a></div>';
+// var HTMLprojectImage = '<a href="#"><img class="projectimage" src="%data%"></a>';
+var HTMLprojectUrl = '<a href="#">%data%</a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -54,6 +56,7 @@ var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineDescription = '<div class="class-description">%data%</div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -136,9 +139,11 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide: 
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
-      locations.push(school.location);
-    });
+
+    for (var school in education.schools) {
+      locations.push(education.schools[school].location);
+    }
+
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
@@ -180,7 +185,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+       infowindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -242,11 +247,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+ map.fitBounds(mapBounds);
+});
