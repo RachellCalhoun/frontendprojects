@@ -17,11 +17,11 @@ var HTMLheaderRole = '<span>%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><a href="#"><span class="orange-text">email</span><span class="white-text">%data%</span></li></a>';
+var HTMLtwitter = '<li class="flex-item"><a href="#"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li></a>';
+var HTMLgithub = '<li class="flex-item"><a href="#"><span class="orange-text">github</span><span class="white-text">%data%</span></li></a>';
+var HTMLblog = '<li class="flex-item"><a href="#"><span class="orange-text">blog</span><span class="white-text">%data%</span></li></a>';
+var HTMLlocation = '<li class="flex-item"><a href="#mapDiv"><span class="orange-text">location</span><span class="white-text">%data%</span></a></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -93,9 +93,12 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+  logClicks(x,y);
 });
 
-
+// prints out the xy of the location of a click
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.

@@ -1,32 +1,13 @@
-var name = "Rachell Calhoun"
-var role = "Web Ninja"
 
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-$("#header").append(formattedName);
-$("#header").append(formattedRole);
 
 var work = {
-	"jobs": [{
-		"employer": "abc company",
-		"title": "super alphabeter",
-		"location": "Kalamazoo, MI USA",
-		"dates": "2/24/2000 - 2/24/2006",
-		"description": " Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
-	},
+	"jobs": [
 	{
-		"employer": "123 company",
-		"title": "super counter",
-		"location": "Kalamazoo, MI USA",
-		"dates": "07/2004 - 10/2006",
-		"description": " Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
-	},
-	{
-		"employer": "school 1 ",
+		"employer": "school 3",
 		"title": "teacher",
-		"location": "Seoul, South Korea",
-		"dates": "08/2007-08/2008",
-		"description": " Duis in mauris id eros fringilla congue. Donec vitae efficitur elit. Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue.  "
+		"location": "Incheon, South Korea",
+		"dates": "03/2014 - 03/2016",
+		"description": " Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	},
 	{
 		"employer": "school 2",
@@ -36,11 +17,25 @@ var work = {
 		"description": "entum nulla faucibus ligula blandit finibus. In condimentum nulla faucibus ligula blandit finibus. Proin purus ex, consectetur et nisi ut,"
 	},
 	{
-		"employer": "school 3",
+		"employer": "school 1 ",
 		"title": "teacher",
-		"location": "Incheon, South Korea",
-		"dates": "03/2014 - 03/2016",
-		"description": " Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
+		"location": "Seoul, South Korea",
+		"dates": "08/2007-08/2008",
+		"description": " Duis in mauris id eros fringilla congue. Donec vitae efficitur elit. Integer eget augue quis lacus facilisis cursus. Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue.  "
+	},
+	{
+		"employer": "123 company",
+		"title": "super counter",
+		"location": "Kalamazoo, MI USA",
+		"dates": "07/2004 - 10/2006",
+		"description": " Nulla vehicula leo elit, id volutpat neque egestas eu. Sed nec sagittis leo. Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
+	},
+	{
+		"employer": "abc company",
+		"title": "super alphabeter",
+		"location": "Kalamazoo, MI USA",
+		"dates": "2/24/2000 - 2/24/2006",
+		"description": " Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	}]
 }
 var projects = {
@@ -78,15 +73,20 @@ var bio = {
 	"name" : "Rachell",
 	"role" : "Web Ninja",
 	"contacts" : {
-		"mobile": "123-1233-3333",
-		"email": "john@example.com",
-		"github": "johndoe",
-		"twitter": "@johndoe",
-		"location": "Seoul"
+		"mobile": " ",
+		"email": "rachell.calhoun@gmail.com",
+		"emailurl": "mailto:rachell.calhoun@gmail.com",
+		"github": "RachellCalhoun",
+		"githuburl": "https://github.com/RachellCalhoun",
+		"twitter": "@Rachell_Calhoun",
+		"twitterurl": "https://twitter.com/Rachell_Calhoun",
+		"location": "Seoul",
+		"blog": "Blog",
+		"blogurl": "http://rachellcalhoun.pythonanywhere.com/"
 		}, 
-	"welcomeMessage" : "Welcome to my world!",
-	"skills" : ["awesomeness", "programming", "teaching","js"],
-	"bioPic" : "images/fry.jpg"
+	"welcomeMsg" : "Welcome to my world!",
+	"skills" : ["Django", "Web-Development", "Awesomeness", "Python", "Teaching","Javascript"],
+	"bioPic" : "images/rachell.jpg"
 }
 
 var education ={
@@ -138,6 +138,26 @@ var education ={
 	}]
 }
 
+
+
+var name = "Rachell Calhoun"
+var role = "Web Ninja"
+var formattedName = HTMLheaderName.replace("%data%", name);
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+var formattedContactInfo = [];
+
+formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email).replace("#", bio.contacts.emailurl));
+formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github).replace("#", bio.contacts.githuburl));
+formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter).replace("#", bio.contacts.twitterurl));
+formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+formattedContactInfo.push(HTMLblog.replace("%data%", bio.contacts.blog).replace("#", bio.contacts.blogurl));
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMsg);
+
 if (document.getElementsByTagName('h1').length === 0) {
     document.getElementById('header').style.display = 'none';
 }
@@ -150,6 +170,10 @@ function displayBio() {
 			$("#skills").append(formattedSkill);
 		}
 	}
+}
+for(i in formattedContactInfo) {
+	$("#topContacts").append(formattedContactInfo[i]);
+	$("#footerContacts").append(formattedContactInfo[i]);
 }
 //need to do contacts display! 
 // function displayContacts() {
@@ -180,7 +204,7 @@ function displayEducation() {
 		for (school in education.schools) {
 			$("#education").append(HTMLschoolStart);
 
-			var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
+			var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name).replace("#", education.schools[school].url);
 			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 			var formattedSchoolDegree = formattedSchool + formattedDegree;
 			$(".education-entry:last").append(formattedSchoolDegree);
@@ -215,7 +239,7 @@ function displayEducation() {
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
-		var formattedprojTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedprojTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].url);
 		$(".project-entry:last").append(formattedprojTitle);
 
 		var formattedprojDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
@@ -237,14 +261,6 @@ displayBio();
 displayWork();
 displayEducation();
 projects.display();
-
-// prints out the xy of the location of a click
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-
-  logClicks(x,y);
-});
 
 // function locationizer(work_obj){
 //     var locationsArray = [];
