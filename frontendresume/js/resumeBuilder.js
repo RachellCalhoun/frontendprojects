@@ -38,6 +38,7 @@ var work = {
 		"description": " Morbi eleifend tortor nec metus dignissim, quis sagittis lectus euismod. Donec ut convallis velit, vitae scelerisque velit. Aliquam lacinia, ex quis porttitor euismod, odio mi accumsan leo, et mollis nunc ipsum condimentum augue. Sed condimentum ultrices leo non pellentesque. Integer quis arcu arcu. "
 	}]
 }
+
 var projects = {
 	"projects": [{
 		"title": "Portfolio",
@@ -68,7 +69,8 @@ var projects = {
 		"images": ["images/lliourstory.png"],
 		"url": "https://github.com/djangogirlscodecamp/lightandleadership"
 	}]
-};
+}
+
 var bio = {
 	"name" : "Rachell",
 	"role" : "Web Ninja",
@@ -138,31 +140,23 @@ var education ={
 	}]
 }
 
-
-
-var name = "Rachell Calhoun"
-var role = "Web Ninja"
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-var formattedContactInfo = [];
-
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email).replace("#", bio.contacts.emailurl));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github).replace("#", bio.contacts.githuburl));
-formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter).replace("#", bio.contacts.twitterurl));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
-formattedContactInfo.push(HTMLblog.replace("%data%", bio.contacts.blog).replace("#", bio.contacts.blogurl));
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
-
-if (document.getElementsByTagName('h1').length === 0) {
-    document.getElementById('header').style.display = 'none';
-}
-
 function displayBio() {
+	var name = "Rachell Calhoun"
+	var role = "Web Ninja"
+	var formattedName = HTMLheaderName.replace("%data%", name);
+	var formattedRole = HTMLheaderRole.replace("%data%", role);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+	var formattedContactInfo = [];
+	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email).replace("#", bio.contacts.emailurl));
+	formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github).replace("#", bio.contacts.githuburl));
+	formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter).replace("#", bio.contacts.twitterurl));
+	formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+	formattedContactInfo.push(HTMLblog.replace("%data%", bio.contacts.blog).replace("#", bio.contacts.blogurl));
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+	$("#header").append(formattedBioPic);
+	$("#header").append(formattedWelcomeMsg);
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 		for (skill in bio.skills) {
@@ -170,11 +164,15 @@ function displayBio() {
 			$("#skills").append(formattedSkill);
 		}
 	}
-}
-for(i in formattedContactInfo) {
+	for(i in formattedContactInfo) {
 	$("#topContacts").append(formattedContactInfo[i]);
 	$("#footerContacts").append(formattedContactInfo[i]);
+	}
+	if (document.getElementsByTagName('h1').length === 0) {
+    document.getElementById('header').style.display = 'none';
+	}
 }
+
 //need to do contacts display! 
 // function displayContacts() {
 // 	if (bio.contacts.length > 0) {
@@ -255,7 +253,7 @@ projects.display = function() {
 			}
 		}
 	}
-};
+}
 
 displayBio();
 displayWork();
